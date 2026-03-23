@@ -1,0 +1,2 @@
+class CallingChild extends Calling{
+}

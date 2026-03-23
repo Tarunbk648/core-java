@@ -1,0 +1,2 @@
+class DominosChild extends Dominos{
+   }

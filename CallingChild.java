@@ -1,2 +1,0 @@
-class CallingChild extends Calling{
-}

@@ -1,3 +1,0 @@
-class ChargingChild extends Charging{
-  }
-  

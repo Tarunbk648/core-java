@@ -6,5 +6,9 @@ class WonderlaExecutor{
 	wonderla.addWaterGames("Rain Disco");
 	
 	wonderla.getWaterGames();
+	
+	wonderla.getNameByIndex(0);
+	
+	wonderla.getIndexByName("Rain Disco");
 	}
  }

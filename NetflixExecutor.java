@@ -4,7 +4,11 @@ class NetflixExecutor{
 	netflix.addWebSeries("Stranger Things");
 	netflix.addWebSeries("Money Heist");
 	netflix.addWebSeries("Dark");
-	
+
 	netflix.getWebSeries();
+	
+	netflix.getWebSeriesNames(0);
+	
+	netflix.getWebSeriesIndex("Stranger Things");
 	}
  }

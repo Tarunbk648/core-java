@@ -4,7 +4,12 @@ class GymExecutor{
 	  gym.addEquipment("Treadmill");
 	  gym.addEquipment("Dumbbells");
 	  gym.addEquipment("Bench press");
+	 
 	  
 	  gym.getEquipmentDetails();
+	  
+	  gym.getNameByIndex(1);
+	  
+	  gym.getIndexByName("Bench press");
 	  }
 	}

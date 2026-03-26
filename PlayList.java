@@ -1,5 +1,5 @@
 class PlayList{
- String[] songNames = new String[5];
+ String[] songNames = new String[18];
  int index;
  
  public boolean addSong(String song){
@@ -11,18 +11,45 @@ class PlayList{
 	 }
 	else{
 	  System.out.println("List is full");
-	  isSongAdded=false;
+	  
 	  }
 	 return isSongAdded;
 	}
  
  public void getDetails(){
-   System.out.println("Second song of the list is:" +songNames[2]);
-   System.out.println("Fourth/Final song of the list is:" +songNames[4]);
+    System.out.println("List of songs");
+   for(String songnames: songNames){
+	   if(songnames!=null){
+	   System.out.println(songnames);
    }
+   }
+ }
   
   PlayList(){
    System.out.println("PlayList Started........");
    }
+   
+   public String getNameByIndex(int index){
+	   String name=null;
+	   if(index<songNames.length){
+		 name=songNames[index];
+		 System.out.println("The name is at index" +index+ " is " +name);
+		}
+		else System.out.println("Invalid index");
+		return name;
    }
+   
+   public int getIndexByName(String name){
+	    int index=0;
+		for(String names:songNames){
+			if(names!=null && names==name){
+				System.out.println("The " +name+ " is at index" +index);
+				return index;
+			}
+			index++;
+		}
+		System.out.println("Inavlid name");
+		return -1;
+   }
+}
    

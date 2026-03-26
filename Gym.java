@@ -1,5 +1,5 @@
 class Gym{
-  String[] equipment = new String[4];
+  String[] equipment = new String[20];
   int index;
   
   public void addEquipment(String name){
@@ -13,13 +13,40 @@ class Gym{
 	}
  
  public void getEquipmentDetails(){
-  System.out.println("LISTS OF EQUIPMENT");
+  System.out.println("LISTS OF EQUIPMENTS");
   for(String equipments: equipment){
+	if(equipments!=null){
     System.out.println(equipments);
  }
+  }
 }
  
   Gym(){
      System.out.println("Gym class Started");
+	}
+	
+	public String getNameByIndex(int index){
+		String name=null;
+		if(index<equipment.length){
+			name=equipment[index];
+			System.out.println("The name is at index " +index+ "is," +name);
+		}
+		else System.out.println("Invalid index");
+		return name;
+	}
+	
+	public int getIndexByName(String names){
+		int index=0;
+		for(String name:equipment){
+			if(name!=null && name==names){
+				System.out.println("The," +name+ ",is at index" +index);
+				return index;
+				
+			}
+			index++;
+		}
+	 
+		System.out.println("Invalid index");
+		return -1;
 	}
 }

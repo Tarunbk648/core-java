@@ -4,7 +4,12 @@ class PhonePeExecutor{
    phonepe.addInsurance("Health Insurance");
    phonepe.addInsurance("Bike Insurance");
    phonepe.addInsurance("Car Insurance");
+
    
    phonepe.getInsurance();
+   
+   phonepe.getNameByIndex(0);
+   
+   phonepe.getIndexByName("Bike Insurance");
    }
   }

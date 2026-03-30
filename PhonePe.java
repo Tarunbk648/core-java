@@ -45,5 +45,36 @@ class PhonePe{
 			}
 			return index;
 	  }
+
+	  public boolean UpdateName(String existingName,  String updatedName){
+		boolean isAppUpdated=false;
+		for(int i =0; i<insuranceNames.length; i++){
+			if(insuranceNames[i]==existingName){
+				insuranceNames[i]=updatedName;
+				System.out.println(existingName + "is updated to" +updatedName);
+				isAppUpdated=true;
+			}
+		}
+		if(isAppUpdated==false){
+			System.out.println(existingName +"not in List");
+		}
+		 return isAppUpdated;
+	  }
+
+	  public boolean deleteName(String name){
+		boolean isDeleted=false;
+		for(int i=0; i<insuranceNames.length; i++){
+			if(insuranceNames[i]!=null && insuranceNames[i]==name){
+				insuranceNames[i]=null;
+				System.out.println(name +" is deleted");
+				isDeleted=true;
+				return isDeleted;
+			}
+		}
+		if(isDeleted==true){
+			System.out.println(name + "not in list");
+		}
+		return false;
+	  }
 }
     

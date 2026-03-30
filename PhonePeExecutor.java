@@ -11,5 +11,11 @@ class PhonePeExecutor{
    phonepe.getNameByIndex(0);
    
    phonepe.getIndexByName("Bike Insurance");
+
+   phonepe.UpdateName("Health Insurance", "Plane Insurance");
+
+   phonepe.deleteName("Bike Insurance");
+
+   phonepe.getInsurance();
    }
   }

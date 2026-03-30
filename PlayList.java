@@ -51,5 +51,38 @@ class PlayList{
 		System.out.println("Inavlid name");
 		return -1;
    }
+
+   public boolean UpdatedName(String existingName, String updatedName){
+	boolean isAppUpdated=false;
+	for(int i=0; i<songNames.length; i++){
+		if(songNames[i]==existingName){
+			songNames[i]=updatedName;
+			System.out.println(existingName + "is updated to" + updatedName);
+			isAppUpdated=true;
+		}
+	}
+	if(isAppUpdated==false){
+		System.out.println(existingName + "not in list");
+	}
+	return isAppUpdated;
+   }
+
+   public boolean deletePlaylist(String name){
+	boolean isPlayListDeleted=false;
+	for(int i=0; i<songNames.length; i++){
+		if(songNames[i]!=null && songNames[i]==name){
+			songNames[i]=null;
+			System.out.println(name + "is deleted");
+			isPlayListDeleted=true;
+			return isPlayListDeleted;
+		}
+
+	}
+	if(isPlayListDeleted==false){
+		System.out.println(name +"not found");
+	}
+   
+   return false;
+}
 }
    

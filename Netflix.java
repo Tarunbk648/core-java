@@ -42,4 +42,37 @@ class Netflix{
 	 }
 	 return index;
 }
+
+ public boolean UpdatedName(String existingName, String updatedName){
+	boolean isAppUpdated=false;
+	for(int i=0; i<webSeries.length; i++){
+		if(webSeries[i]==existingName){
+			webSeries[i]=updatedName;
+			System.out.println(existingName + "is updated to" +updatedName);
+			isAppUpdated=true;
+		}
+
+	}
+	if(isAppUpdated==false){
+		System.out.println(existingName +"Not in list");
+	}
+	return isAppUpdated;
+ }
+
+ public boolean deleteName(String name){
+	boolean isNamedeleted=false;
+	for(int i=0; i<webSeries.length; i++){
+		if(webSeries[i]!=null && webSeries[i]==name){
+			webSeries[i]=null;
+			System.out.println(name +" is deleted");
+			isNamedeleted=true;
+		}
+	}
+	if(isNamedeleted==false){
+		System.out.println(name + "not in list");
+	}
+	
+ return isNamedeleted;
+}
+ 
 }

@@ -49,4 +49,37 @@ class Gym{
 		System.out.println("Invalid index");
 		return -1;
 	}
+
+	public boolean UpdateGymName(String existingName, String updatedName){
+		boolean isAppUpdated=false;
+		for(int i=0; i<equipment.length; i++){
+			if(equipment[i]==existingName){
+				equipment[i]=updatedName;
+				System.out.println(existingName + "is updated to " +updatedName);
+				isAppUpdated=false;
+
+			}
+
+		}
+
+		if(isAppUpdated==false){
+			System.out.println(existingName + "not in list");
+		}
+		return isAppUpdated;
+	}
+
+	public boolean deleteitemName(String item){
+		boolean isItemDeleted=false;
+		for(int i=0; i<equipment.length; i++){
+			if(equipment[i]!=null && equipment[i]==item){
+				equipment[i]=null;
+				System.out.println(item +"is deleted");
+				isItemDeleted=true;
+			}
+		}
+		if(isItemDeleted==false){
+			System.out.println(item +"not in the list");
+		}
+		return isItemDeleted;
+	}
 }

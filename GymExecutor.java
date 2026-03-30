@@ -11,5 +11,11 @@ class GymExecutor{
 	  gym.getNameByIndex(1);
 	  
 	  gym.getIndexByName("Bench press");
+
+	  gym.UpdateGymName("Treadmill" , "Runmill");
+
+	  gym.deleteitemName("Dumbbells");
+
+	  gym.getEquipmentDetails();
 	  }
 	}

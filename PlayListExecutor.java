@@ -11,6 +11,12 @@ class PlayListExecutor{
    playlist.getNameByIndex(2);
    
    playlist.getIndexByName("Ranavikrama");
+
+   playlist.UpdatedName("Ranavikrama", "Gajakesari");
+
+   playlist.deletePlaylist("Gajakesari");
+
+   playlist.getDetails();
    
   }
  }

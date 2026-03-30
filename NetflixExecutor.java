@@ -10,5 +10,11 @@ class NetflixExecutor{
 	netflix.getWebSeriesNames(0);
 	
 	netflix.getWebSeriesIndex("Stranger Things");
+
+	netflix.UpdatedName("Dark", "White");
+
+	netflix.deleteName("Dark");
+
+	netflix.getWebSeries();
 	}
  }

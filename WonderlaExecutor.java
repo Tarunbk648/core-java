@@ -10,5 +10,11 @@ class WonderlaExecutor{
 	wonderla.getNameByIndex(0);
 	
 	wonderla.getIndexByName("Rain Disco");
+
+	wonderla.updateAppName("Rain Disco", "Disco Rain");
+
+	wonderla.deleteGames("Lazy River");
+
+	wonderla.getWaterGames();
 	}
  }

@@ -44,4 +44,34 @@ class Wonderla{
 		}
 		return index;
 	}
+
+	public boolean updateAppName(String existingName, String updatedName){
+		boolean isAppUpdated=false;
+		for(int i=0; i<waterGames.length; i++){
+			if(waterGames[i]==existingName){
+				waterGames[i]=updatedName;
+				System.out.println(existingName + "is updated to" +updatedName);
+				isAppUpdated=true;
+			}
+		}
+		if(isAppUpdated==false){
+			System.out.println(existingName + "not in list");
+		}
+		return isAppUpdated;
+	}
+
+	public boolean deleteGames(String name){
+		boolean isGameDeleted=false;
+		for(int i=0; i<waterGames.length; i++){
+			if(waterGames[i]!=null && waterGames[i]==name){
+				waterGames[i]=null;
+				System.out.println(name +"is deleted");
+				isGameDeleted=true;
+			}
+		}
+		if(isGameDeleted==false){
+			System.out.println(name + "not in list");
+		}
+		return isGameDeleted;
+	}
 }

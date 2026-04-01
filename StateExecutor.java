@@ -19,7 +19,8 @@ class StateExecutor{
 	  
 	   state.getStateNames();
 
-	   
-	  
+	   String[] names={"Karnataka", "Tamil Nadu", "Kerala", "Andhra pradesh", "Madhya pradesh"};
+	   boolean stateNames=state.createeStateNames(names);
+	   System.out.println("The state names:" +stateNames);
 	 }
  }

@@ -16,11 +16,12 @@ class PlayListExecutor{
 
    // playlist.deletePlaylist("Gajakesari");
 
-   playlist.getDetails();
+   // playlist.getDetails();
 
    String[] songs={"Ranavikrama", "Chuttamelle", "Tum Hi Ho"};
    boolean songNames=playlist.createSongNames(songs);
    System.out.println("Song names:" +songNames);
+   playlist.getDetails();
    
   }
  }

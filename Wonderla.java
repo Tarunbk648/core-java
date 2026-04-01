@@ -74,4 +74,14 @@ class Wonderla{
 		}
 		return isGameDeleted;
 	}
+
+	public boolean createGamesNames(String[] names){
+		boolean isGamesAdded=false;
+		if(names.length<=this.waterGames.length){
+			this.waterGames=names;
+			isGamesAdded=true;
+		}
+		else System.out.println("Invalid");
+		return isGamesAdded;
+	}
 }

@@ -16,10 +16,11 @@ class PhonePeExecutor{
 
    // phonepe.deleteName("Bike Insurance");
 
-   phonepe.getInsurance();
+   // phonepe.getInsurance();
 
   String[] insurance={"Health Insurance", "Bike Insurance", "Car Insurance"};
   boolean insuranceNames=phonepe.createInsuranceNames(insurance);
   System.out.println("Insurance names:" +insuranceNames);
+  phonepe.getInsurance();
    }
   }

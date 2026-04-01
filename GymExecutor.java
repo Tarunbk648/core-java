@@ -21,5 +21,6 @@ class GymExecutor{
 	  String[] equipmentNames={"Treadmill", "Dumbbells", "Bench press"};
 	  boolean equipments= gym.createequipmentName(equipmentNames);
 	  System.out.println("The equipment names are:" +equipments);
+	  gym.getEquipmentDetails();
 	  }
 	}

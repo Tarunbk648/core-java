@@ -20,5 +20,6 @@ class NetflixExecutor{
 	 String[] webseries={"Stranger things", "Money Heist", "Dark"};
 	 boolean series=netflix.createNeflixNames(webseries);
 	 System.out.println(series);
+	 netflix.getWebSeries();
 	}
  }

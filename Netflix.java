@@ -74,5 +74,15 @@ class Netflix{
 	
  return isNamedeleted;
 }
+
+public boolean createNeflixNames(String[] names){
+	boolean isNamesAdded=false;
+	if(names.length<=this.webSeries.length){
+		this.webSeries=names;
+		isNamesAdded=true;
+	}
+	else System.out.println("Invalid data");
+	return isNamesAdded;
+}
  
 }

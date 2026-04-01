@@ -82,4 +82,17 @@ class Gym{
 		}
 		return isItemDeleted;
 	}
+
+	public boolean createequipmentName(String[] equipment){
+		boolean isEquipmentCreated=false;
+		if(equipment.length<=this.equipment.length){
+			this.equipment=equipment;
+			isEquipmentCreated=true;
+		}
+		else System.out.println("Invalid");
+		return isEquipmentCreated;
+	}
+
+}
+		 
 }

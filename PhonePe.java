@@ -76,5 +76,15 @@ class PhonePe{
 		}
 		return false;
 	  }
+
+	public boolean createInsuranceNames(String[] insuranceName){
+		boolean isInsuranceNamesAdded=false;
+		if(insuranceName.length<=this.insuranceName.length){
+			this.insuranceName=insuranceName;
+			isInsuranceNamesAdded=true;
+		}
+		else System.out.println("Invalid data");
+		return isInsuranceNamesAdded;
+	}
 }
     

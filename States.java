@@ -79,5 +79,14 @@ class States{
     }
     return isStateDeleted;
   }
-  
- }
+
+public boolean createeStateNames(String[] names){
+	boolean isNamesAdded=false;
+	if(names.length<=this.statesName.length){
+		this.statesName=names;
+		isNamesAdded=true;
+	}
+	else System.out.println("Invalid");
+	return isNamesAdded;
+}
+  }

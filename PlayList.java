@@ -84,5 +84,15 @@ class PlayList{
    
    return false;
 }
+
+  public boolean createSongNames(String[] songs){
+	  boolean isSongsAdded=false;
+	  if(songs.length<=this.songNames.length){
+		  this.songNames=songs;
+		  isSongsAdded=true;
+	  }
+	  else System.out.println("Invalid");
+	  return isSongsAdded;
+  }
 }
    

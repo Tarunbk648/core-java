@@ -1,5 +1,6 @@
 class Amazon{
- AmazonSubscription amazonsubcription;
+ AmazonSubscription amazonsubcription[]= new AmazonSubscription[20];
+ int index;
  
  public boolean createAmazonAccount( AmazonSubscription amazonsubcription){
 	 boolean isAccountCreated=false;
@@ -36,20 +37,28 @@ class Amazon{
 	 }
 	 
 	 if(isIdValid==true && isNameValid==true &&  isEmailValid==true &&  isPhoneNumberValid==true && isAddressValid==true){
-		 this.amazonsubcription=amazonsubcription;
+		 this.amazonsubcription[index]=amazonsubcription;
+		 index++;
 		 isAccountCreated=true;
 	 }
 	 return isAccountCreated;
  }
  
  public void getDetails(){
-	 System.out.println("UserId:" +amazonsubcription.getId());
-	 System.out.println("UserName:" +amazonsubcription.getName());
-	 System.out.println("Email:" +amazonsubcription.getEmail());
-	 System.out.println("PhoneNumber:" +amazonsubcription.getPhoneNumber());
-	 System.out.println("Address:" +amazonsubcription.getAddress());
+	 System.out.println("MAIN STARTED");
+	 System.out.println("---------");
+	 for(AmazonSubscription amazonsub: amazonsubcription){
+		 if(amazonsub!=null){
+			System.out.println("UserId:" +amazonsub.getId());
+			System.out.println("UserName:" +amazonsub.getName());
+			System.out.println("Email:" +amazonsub.getEmail());
+			System.out.println("PhoneNumber:" +amazonsub.getPhoneNumber());
+			System.out.println("Address:" +amazonsub.getAddress());
+			System.out.println("--------------------");
 	 
  }
+}
+}
 }
 		 
 		 

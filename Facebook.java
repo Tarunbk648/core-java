@@ -1,5 +1,6 @@
 class Facebook{
-  UserAccount userAccount;
+  UserAccount userAccount[]= new UserAccount[19];
+  int index;
   public boolean createUserAccount(UserAccount userAccount){
      boolean isUserAccoountCreated=false;
 	 boolean isUserIdValid=false;
@@ -35,19 +36,25 @@ class Facebook{
 		 }
 	 if(isUserIdValid==true && isUserNameCreated==true &&   isEmailCreated==true &&  isPasswordCreated==true && isPhoneNumberCreated==true && isGenderCreated==true){
 		   
-			this.userAccount = userAccount;
+			this.userAccount[index] = userAccount;
+			index++;
 			isUserAccoountCreated=true;
 	 }
 	return isUserAccoountCreated;
 }
 
 public void getDetails(){
-	 if(userAccount!=null){
-		System.out.println("UserID:" +userAccount.getId());
-		System.out.println("UserName:" +userAccount.getUserName());
-		System.out.println("Email:" +userAccount.getEmail());
-		System.out.println("Password:" +userAccount.getPassword());
-		System.out.println("Gender:" +userAccount.getGender());
+	System.out.println("MAIN STARTED");
+	System.out.println("------------------------");
+	 for(UserAccount Account: userAccount){
+		if(Account!=null){
+		System.out.println("UserID:" +Account.getId());
+		System.out.println("UserName:" +Account.getUserName());
+		System.out.println("Email:" +Account.getEmail());
+		System.out.println("Password:" +Account.getPassword());
+		System.out.println("Gender:" +Account.getGender());
+		System.out.println("---------------------");
+	 }
 	 }
 }
 }

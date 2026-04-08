@@ -1,5 +1,6 @@
 class TrainingCenter{
-	TrainingCenterDescription trainingcenter;
+	TrainingCenterDescription trainingcenter[]= new TrainingCenterDescription[20];
+	int index;
 	
 	public boolean addTrainingCenterData(TrainingCenterDescription trainingcenter){
 		  boolean isDataAdded=false;
@@ -35,19 +36,25 @@ class TrainingCenter{
 		  }
 		  
 		  if( isIdValid==true &&  isCenterNameValid==true  &&  isTrainerNameValid==true  &&  isCourseNameValid==true   &&  isDurationValid==true){
-					this.trainingcenter=trainingcenter;
+					this.trainingcenter[index++]=trainingcenter;
 					isDataAdded=true;
 		  }
 		  return isDataAdded;
 	}
 		  
 		  public void getDetails(){
-			  System.out.println("ID:" +trainingcenter.getId());
-			  System.out.println("Center Name:" +trainingcenter.getCenterName());
-			  System.out.println("Trainer Name:" +trainingcenter.getTrainerName());
-			  System.out.println("Course Name:" +trainingcenter.getCourseName());
-			  System.out.println("Course Duration:" +trainingcenter.getDuration());
+			  System.out.println("MAIN STARTED");
+			  System.out.println("---------------------------");
+			  for(TrainingCenterDescription training:trainingcenter){
+				  if(training!=null){
+			  System.out.println("ID:" +training.getId());
+			  System.out.println("Center Name:" +training.getCenterName());
+			  System.out.println("Trainer Name:" +training.getTrainerName());
+			  System.out.println("Course Name:" +training.getCourseName());
+			  System.out.println("Course Duration:" +training.getDuration());
+			  System.out.println("---------------------------");
 		  }
 
-
+	  }
+	}
 }

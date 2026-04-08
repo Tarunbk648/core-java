@@ -1,5 +1,6 @@
 class PassportSeva{
-  PassPortSevaRegistration  passportsevaregistration;
+  PassPortSevaRegistration  passportsevaregistration[]= new PassPortSevaRegistration[20];
+  int index;
   public boolean createPassportSevaAccount(PassPortSevaRegistration  passportsevaregistration){
      boolean isAccountCreated=false;
 	 boolean isPassportIdValid=false;
@@ -39,21 +40,29 @@ class PassportSeva{
 	    isAddressValid=true;
 		}
 	if(isPassportIdValid==true && isApplicantNameValid==true && isDateOfBirthValid==true && isApplicantBelongsToIndia==true &&  isGenderValid==true &&  isAddressValid==true){
-		this.passportsevaregistration=passportsevaregistration;
+		this.passportsevaregistration[index]=passportsevaregistration;
+		index++;
 		isAccountCreated=true;
   }
   return isAccountCreated;
   }
 	
 	public void getDetails(){
-		System.out.println("PassportId:" +passportsevaregistration.getID());
-		System.out.println("Aplicant name:" +passportsevaregistration.getName());
-		System.out.println("Applicant DOB:" +passportsevaregistration.getDob());
-		System.out.println("Is indian:" +passportsevaregistration.getResident());
-		System.out.println("Applicant gender:" +passportsevaregistration.getGender());
-		System.out.println("Applicant address:" +passportsevaregistration.getAddress());
+		System.out.println("MAIN STARTED");
+		System.out.println("------------------");
+		for(PassPortSevaRegistration  passportseva:passportsevaregistration){
+		if(passportseva!=null){
+		System.out.println("PassportId:" +passportseva.getID());
+		System.out.println("Aplicant name:" +passportseva.getName());
+		System.out.println("Applicant DOB:" +passportseva.getDob());
+		System.out.println("Is indian:" +passportseva.getResident());
+		System.out.println("Applicant gender:" +passportseva.getGender());
+		System.out.println("Applicant address:" +passportseva.getAddress());
+		System.out.println("----------------------------");
+	}
 	}
   }
+}
 	    
 	    
 	    

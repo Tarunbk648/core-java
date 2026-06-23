@@ -1,6 +1,6 @@
 package com.xworkz.facebook.facebook;
 
-public class UserAccount implements Cloneable{
+public class UserAccount implements Cloneable{    
     private int Id;
     private String userName;
     private String email;
